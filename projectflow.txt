@@ -55,6 +55,18 @@ max_features = params['feature_engineering']['max_features']
 # model_building
 params = load_params('params.yaml')['model_building']
 
+
+Adding a remote S3 storage to DVC:
+
+Create IAM User (straight forward process)
+Create S3(enter unique name and create)
+pip install dvc[s3]
+pip install awscli
+aws configure
+dvc remote add -d dvcstore s3://bucketname
+dvc commit-push the exp outcome that you want to keep.
+finally git add, commit, push.
+
 -------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------
