@@ -20,3 +20,9 @@ pip install awscli
 dvc remote add -d dvcstore s3://bucketname
 dvc commit-push the exp outcome that you want to keep.
 finally git add, commit, push.
+
+# Extra and important:
+> to avoid AWS billing charges again delete the S3 buckt and than I AM USER.
+> we can also create dvc.YAML file using this command: 
+
+>>> Adding stage to dvc.yaml: "dvc stage add -n data_ingestion -dsrc/data_ingestion.py -odata/raw python src/data_ingestion.py"
